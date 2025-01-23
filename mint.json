@@ -1,16 +1,15 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Starter Kit",
-  "theme": "quill",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#181818",
+    "light": "#DEDEDE",
+    "dark": "#0A0A0B",
     "anchors": {
       "from": "#0D9373",
       "to": "#07C983"
