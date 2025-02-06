@@ -32,15 +32,15 @@
   "tabs": [
     {
       "name": "Documentation",
-      "url": "pages/documentation"
+      "url": "docs"
     },
     {
       "name": "User Guide",
-      "url": "pages/user-guide"
+      "url": "guide"
     },
     {
       "name": "Creator Guide",
-      "url": "pages/creator-guide"
+      "url": "creator"
     }
   ],
   "anchors": [
@@ -55,19 +55,29 @@
       "group": "Documentation",
       "pages": [
         {
-          "group": "Basic Concepts",
+          "group": "Investment DAOs",
           "pages": [
-            "pages/documentation/basic-concepts/original-design",
-            "pages/documentation/basic-concepts/aum-concept",
-            "pages/documentation/basic-concepts/redemption"
+            "docs/original-design",
+            {
+              "group": "Advanced Topics",
+              "pages": [
+                "docs/aum-concept",
+                "docs/redemption",
+                "docs/liquidity"
+              ]
+            }
           ]
         },
         {
-          "group": "Advanced Topics",
+          "group": "Founder DAOs",
           "pages": [
-            "pages/documentation/advanced-topics/tokenomics",
-            "pages/documentation/advanced-topics/liquidity",
-            "pages/documentation/advanced-topics/pool-party-investing"
+            "docs/founder-basics",
+            {
+              "group": "Advanced Topics",
+              "pages": [
+                "docs/tokenomics"
+              ]
+            }
           ]
         }
       ]
@@ -75,15 +85,15 @@
     {
       "group": "User Guide",
       "pages": [
-        "pages/user-guide/getting-started"
+        "guide/getting-started"
       ]
     },
     {
       "group": "Creator Guide",
       "pages": [
-        "pages/creator-guide/overview",
-        "pages/creator-guide/listing",
-        "pages/creator-guide/creator"
+        "creator/overview",
+        "creator/listing",
+        "creator/creator"
       ]
     }
   ],
