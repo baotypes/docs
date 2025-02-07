@@ -3,7 +3,8 @@
   "name": "Starter Kit",
   "logo": {
     "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "light": "/logo/light.svg",
+    "href": "https://daos.fun"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -19,15 +20,10 @@
       "to": "#999999"      
     }
   },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
-    }
-  ],
+  "topbarLinks": [],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "daos.fun",
+    "url": "https://daos.fun"
   },
   "tabs": [
     {
@@ -35,19 +31,8 @@
       "url": "docs"
     },
     {
-      "name": "User Guide",
-      "url": "guide"
-    },
-    {
       "name": "Creator Guide",
       "url": "creator"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Community",
-      "icon": "comments",
-      "url": "https://discord.gg/placeholder"
     }
   ],
   "navigation": [
@@ -57,10 +42,11 @@
         {
           "group": "Investment DAOs",
           "pages": [
-            "docs/original-design",
+            "docs/core-concept",
             {
               "group": "Advanced Topics",
               "pages": [
+                "docs/fund-specs",
                 "docs/aum-concept",
                 "docs/redemption",
                 "docs/liquidity"
@@ -80,12 +66,6 @@
             }
           ]
         }
-      ]
-    },
-    {
-      "group": "User Guide",
-      "pages": [
-        "guide/getting-started"
       ]
     },
     {
