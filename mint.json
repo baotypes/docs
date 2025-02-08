@@ -43,13 +43,14 @@
           "group": "Investment DAOs",
           "pages": [
             "docs/core-concept",
+            "docs/example-raise",
             {
               "group": "Advanced Topics",
               "pages": [
-                "docs/fund-specs",
-                "docs/aum-concept",
-                "docs/redemption",
-                "docs/liquidity"
+                "docs/liquidity",
+                "docs/expiry-redemption",
+                "docs/aum",
+                "docs/using-wallet"
               ]
             }
           ]
