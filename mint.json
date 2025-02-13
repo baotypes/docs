@@ -42,17 +42,14 @@
         {
           "group": "Investment DAOs",
           "pages": [
-            "docs/core-concept",
+            "docs/intro",
             "docs/example-raise",
-            {
-              "group": "Advanced Topics",
-              "pages": [
-                "docs/liquidity",
-                "docs/expiry-redemption",
-                "docs/aum",
-                "docs/using-wallet"
-              ]
-            }
+            "docs/vesting",
+            "docs/whitelisting",
+            "docs/liquidity",
+            "docs/expiry-redemption",
+            "docs/aum",
+            "docs/using-wallet"
           ]
         },
         {
