@@ -15,15 +15,15 @@ GET https://api-daos.fly.dev/daos/{dao_mint}
 
 ## Response Fields
 
-| Field       | Type   | Description                                        |
-| ----------- | ------ | -------------------------------------------------- |
-| mint        | string | The mint address of the DAO                        |
-| name        | string | The name of the DAO                                |
-| description | string | A description of the DAO                           |
-| image       | string | IPFS URL to the DAO's image                        |
-| website     | string | The DAO's website URL (format depends on dao_type) |
-| telegram    | string | The DAO's Telegram link (can be null)              |
-| twitter     | string | The DAO's Twitter handle (can be null)             |
+| Field       | Type   | Description                            |
+| ----------- | ------ | -------------------------------------- |
+| mint        | string | The mint address of the DAO            |
+| name        | string | The name of the DAO                    |
+| description | string | A description of the DAO               |
+| image       | string | IPFS URL to the DAO's image            |
+| website     | string | The DAO's website URL                  |
+| telegram    | string | The DAO's Telegram link (can be null)  |
+| twitter     | string | The DAO's Twitter handle (can be null) |
 
 ## Example Request
 
@@ -87,11 +87,3 @@ curl https://api-daos.fly.dev/daos/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC
   "details": "Error message details"
 }
 ```
-
-## Implementation Details
-
-- The endpoint validates the mint parameter format (must be 44 characters long)
-- DAO information is stored in both a database and Redis cache
-- Website URL format depends on the DAO type:
-  - Founder DAOs: `https://www.daos.fun/dao/{mint}`
-  - Other DAOs: `https://www.daos.fun/{mint}`
