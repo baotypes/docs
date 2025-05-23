@@ -1,5 +1,5 @@
 ---
-title: DAOS API
+title: Introduction
 description: "Welcome to the Daos Fun API Documentation"
 ---
 
@@ -7,121 +7,62 @@ description: "Welcome to the Daos Fun API Documentation"
 
 Welcome to the Daos Fun API! This guide will help you integrate with our platform to retrieve DAO information programmatically.
 
-## Getting Started
+## Overview
 
-The Daos Fun API allows you to retrieve detailed information about specific DAOs using their mint address. Here's how to get started:
+The Daos Fun API provides access to detailed information about DAOs on our platform. Our API is designed to be simple to use and requires no authentication.
 
-1. Base URL: `https://api-daos.fly.dev`
-2. All endpoints return JSON responses
-3. No authentication required
+## Base URL
 
-## Endpoints
-
-### Get DAO Information
-
-Retrieves information about a specific DAO using its mint address.
+All API endpoints are relative to the base URL:
 
 ```bash
-GET https://api-daos.fly.dev/daos/{dao_mint}
+https://api-daos.fly.dev
 ```
 
-#### Path Parameters
+## Response Format
 
-| Parameter | Type   | Description                                              |
-| --------- | ------ | -------------------------------------------------------- |
-| dao_mint  | string | The mint address of the DAO (must be 44 characters long) |
+All responses are returned in JSON format. Successful responses will include the requested data, while error responses will include an error message and appropriate HTTP status code.
 
-#### Response Fields
+## Authentication
 
-| Field       | Type   | Description                                        |
-| ----------- | ------ | -------------------------------------------------- |
-| mint        | string | The mint address of the DAO                        |
-| name        | string | The name of the DAO                                |
-| description | string | A description of the DAO                           |
-| image       | string | IPFS URL to the DAO's image                        |
-| website     | string | The DAO's website URL (format depends on dao_type) |
-| telegram    | string | The DAO's Telegram link (can be null)              |
-| twitter     | string | The DAO's Twitter handle (can be null)             |
+Currently, no authentication is required to access the API endpoints.
 
-#### Example Request
+## Rate Limiting
 
-```bash
-curl https://api-daos.fly.dev/daos/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC
-```
+To ensure fair usage and optimal performance, we implement rate limiting on our API endpoints. Please implement appropriate caching strategies in your applications.
 
-#### Example Response
+## Available Endpoints
 
-```json
-{
-  "mint": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
-  "name": "ai16z",
-  "description": "ai16z is the first AI VC fund, fully managed by Marc AIndreessen with recommendations from members of the DAO.",
-  "image": "https://ipfs.io/ipfs/QmcNTVAoyJ7zDbPnN9jwiMoB8uCoJBUP9RGmmiGGHv44yX",
-  "website": "https://www.daos.fun/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
-  "telegram": null,
-  "twitter": null
-}
-```
+### DAO Information
+
+- [Get DAO by Mint](/api-reference/get-dao) - Retrieve detailed information about a specific DAO using its mint address
 
 ## Error Handling
 
-The API may return the following error responses:
+The API uses standard HTTP status codes to indicate the success or failure of requests:
 
-| Status Code | Description                       | Response Body                                                          |
-| ----------- | --------------------------------- | ---------------------------------------------------------------------- |
-| 400         | Missing or invalid mint parameter | `{ "error": "Dao mint is required" }` or `{ "error": "Invalid mint" }` |
-| 404         | DAO not found in database         | `{ "error": "Dao not found" }`                                         |
-| 500         | Internal server error             | `{ "error": "Failed to fetch dao", "details": "error message" }`       |
+| Status Code | Description                        |
+| ----------- | ---------------------------------- |
+| 200         | Success                            |
+| 400         | Bad Request - Invalid parameters   |
+| 404         | Not Found - Resource doesn't exist |
+| 500         | Internal Server Error              |
 
-### Error Response Examples
-
-#### Missing Mint Parameter
-
-```json
-{
-  "error": "Dao mint is required"
-}
-```
-
-#### Invalid Mint Format
+All error responses follow this format:
 
 ```json
 {
-  "error": "Invalid mint"
+  "error": "Error message",
+  "details": "Additional error details (if available)"
 }
 ```
-
-#### DAO Not Found
-
-```json
-{
-  "error": "Dao not found"
-}
-```
-
-#### Server Error
-
-```json
-{
-  "error": "Failed to fetch dao",
-  "details": "Error message details"
-}
-```
-
-## Implementation Details
-
-- The endpoint validates the mint parameter format (must be 44 characters long)
-- DAO information is stored in both a database and Redis cache
-- Website URL format depends on the DAO type:
-  - Founder DAOs: `https://www.daos.fun/dao/{mint}`
-  - Other DAOs: `https://www.daos.fun/{mint}`
 
 ## Best Practices
 
-1. Always handle error responses gracefully
-2. Cache responses when appropriate
-3. Implement rate limiting in your applications
-4. Validate mint parameters before making requests
+1. Implement proper error handling in your applications
+2. Cache responses when appropriate to reduce API calls
+3. Validate parameters before making requests
+4. Monitor your API usage and implement rate limiting
 
 ## Need Help?
 

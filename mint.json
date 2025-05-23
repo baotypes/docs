@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "DAOS.Fun",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg",
@@ -81,7 +81,13 @@
     {
       "group": "API Reference",
       "pages": [
-        "api-reference/index"
+        "api-reference/index",
+        {
+          "group": "Endpoints",
+          "pages": [
+            "api-reference/get-dao"
+          ]
+        }
       ]
     }
   ],

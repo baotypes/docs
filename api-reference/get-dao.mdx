@@ -1,0 +1,97 @@
+---
+title: Get DAO by Mint
+description: "Retrieve detailed information about a specific DAO using its mint address"
+---
+
+```bash
+GET https://api-daos.fly.dev/daos/{dao_mint}
+```
+
+## Path Parameters
+
+| Parameter | Type   | Description                                              |
+| --------- | ------ | -------------------------------------------------------- |
+| dao_mint  | string | The mint address of the DAO (must be 44 characters long) |
+
+## Response Fields
+
+| Field       | Type   | Description                                        |
+| ----------- | ------ | -------------------------------------------------- |
+| mint        | string | The mint address of the DAO                        |
+| name        | string | The name of the DAO                                |
+| description | string | A description of the DAO                           |
+| image       | string | IPFS URL to the DAO's image                        |
+| website     | string | The DAO's website URL (format depends on dao_type) |
+| telegram    | string | The DAO's Telegram link (can be null)              |
+| twitter     | string | The DAO's Twitter handle (can be null)             |
+
+## Example Request
+
+```bash
+curl https://api-daos.fly.dev/daos/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC
+```
+
+## Example Response
+
+```json
+{
+  "mint": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+  "name": "ai16z",
+  "description": "ai16z is the first AI VC fund, fully managed by Marc AIndreessen with recommendations from members of the DAO.",
+  "image": "https://ipfs.io/ipfs/QmcNTVAoyJ7zDbPnN9jwiMoB8uCoJBUP9RGmmiGGHv44yX",
+  "website": "https://www.daos.fun/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+  "telegram": null,
+  "twitter": null
+}
+```
+
+## Error Responses
+
+| Status Code | Description                       | Response Body                                                          |
+| ----------- | --------------------------------- | ---------------------------------------------------------------------- |
+| 400         | Missing or invalid mint parameter | `{ "error": "Dao mint is required" }` or `{ "error": "Invalid mint" }` |
+| 404         | DAO not found in database         | `{ "error": "Dao not found" }`                                         |
+| 500         | Internal server error             | `{ "error": "Failed to fetch dao", "details": "error message" }`       |
+
+### Error Response Examples
+
+#### Missing Mint Parameter
+
+```json
+{
+  "error": "Dao mint is required"
+}
+```
+
+#### Invalid Mint Format
+
+```json
+{
+  "error": "Invalid mint"
+}
+```
+
+#### DAO Not Found
+
+```json
+{
+  "error": "Dao not found"
+}
+```
+
+#### Server Error
+
+```json
+{
+  "error": "Failed to fetch dao",
+  "details": "Error message details"
+}
+```
+
+## Implementation Details
+
+- The endpoint validates the mint parameter format (must be 44 characters long)
+- DAO information is stored in both a database and Redis cache
+- Website URL format depends on the DAO type:
+  - Founder DAOs: `https://www.daos.fun/dao/{mint}`
+  - Other DAOs: `https://www.daos.fun/{mint}`
