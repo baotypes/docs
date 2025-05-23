@@ -33,6 +33,10 @@
     {
       "name": "Creator Guide",
       "url": "creator"
+    },
+    {
+      "name": "API",
+      "url": "api-reference"
     }
   ],
   "navigation": [
@@ -72,6 +76,12 @@
         "creator/overview",
         "creator/listing",
         "creator/creator"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-reference/index"
       ]
     }
   ],
