@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "DAOS.Fun",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg",
@@ -33,6 +33,10 @@
     {
       "name": "Creator Guide",
       "url": "creator"
+    },
+    {
+      "name": "API",
+      "url": "api-reference"
     }
   ],
   "navigation": [
@@ -72,6 +76,18 @@
         "creator/overview",
         "creator/listing",
         "creator/creator"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-reference/index",
+        {
+          "group": "Endpoints",
+          "pages": [
+            "api-reference/get-dao"
+          ]
+        }
       ]
     }
   ],
