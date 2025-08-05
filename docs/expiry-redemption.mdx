@@ -1,50 +1,53 @@
 ---
-title: 'Expiry and Redemption'
-description: 'Understanding the redemption process'
+title: "Expiry and Redemption"
+description: "Understanding the redemption process"
 ---
 
-It is important to understand the Redemption Process because this is what every Dao is building towards. 
-It is our hope to ship governance that will allow voting to extend the expiration date of DAOs. 
-I imagine it will be best for many DAOs to vote to extend their fund if things are going well, instead of going to redemption. 
+### Understanding the Redemption Process
 
+- The **redemption process** is what every DAO is ultimately building toward.
+- Governance will be introduced to **allow voting to extend the expiration date** of a DAO.
+  - Many DAOs may choose to extend the fund instead of redeeming if performance is strong.
 
-<Note>
-The Dao Token is a redemption token. 
-</Note>
+### DAO Token = Redemption Token
 
-There is a timer attached to the Smart Wallet. 
-This is the amount of time that you selected combined with the date that you listed the fund on Dao's fund website. 
-When the timer fills no more transactions can be executed from the wallet. 
+- DAO tokens are **redemption tokens** — they can be burned to redeem treasury assets.
+- A **timer** is attached to the Smart Wallet.
+  - This timer is based on the **duration selected \+ listing date** on the [DAOs.FUN](http://DAOs.FUN) site.
+  - Once the timer expires, **no more transactions** can be executed from the wallet.
+  - **Set a calendar reminder** for this date to ensure your fund is ready before expiry.
 
-Please pay special attention to this date. 
-Consider making a calendar event because you will want to have your fund in order before your wallet expires. 
+### Closing the Fund
 
+- A fund can be **closed early at any time** by clicking **“Convert and Close.”**
+- To receive carry:
+  - You must **convert the fund** into **wrapped SOL (wSOL)**.
+  - You must **convert DAO tokens** into **wrapped SOL**.
 
-You can close the fund at any time prematurely. You do this by pressing the convert and close button. 
+### Post-Expiration Rules
 
-in order for you to receive your carry you need to convert and close convert your fund into wrapped sol and convert your tokens into wrapped sol
+- When the fund expires:
+  - A **snapshot** is taken of the wallet’s assets.
+  - **Only assets present at the time of the snapshot** are eligible for redemption.
+  - Tokens sent **after expiration** are not redeemable.
+- Even after expiration:
+  - The DAO token can **still be traded**.
+  - It behaves like a **normal SPL token** with special smart contract functionality.
 
-Both soul and wrapped soul can be redeemed out of a Dao. 
+### Redemption Mechanics (Current State)
 
-When the fund expires, a snapshot is taken of the assets in the fund. 
-This means that tokens sent to the fund after it expires will not be able to be redeemed because redemption is based on the snapshot at close. 
+- **Only SOL is redeemable** at this time.
+- All other tokens are currently **stuck in the wallet**.
+- Best practice is to **sell non-SOL tokens into SOL** before fund expiry.
+  - Similar to how a fund manager would liquidate assets before closing.
 
-Even after a fund is expired the DAO token can trade indefinitely. Remember this is a normal token 2022 token on the Solana network it just has unique capabilities with one smart contract. 
+### Future Redemption Features (Planned)
 
+- DAO may support **burn-to-redeem multiple token types** in the future.
+- Redemption may shift to a **pro-rata burn model**:
+  - Example: Burning 1% of the supply unlocks 1% of the SOL in the treasury.
 
-# Redemption
+### Why AUM Matters
 
-At the moment only sol is redeemed. 
-
-All other tokens are stuck in there. 
-
-The concept like a normal fund at the moment is to sell all of the other tokens into Sol similar how someone would sell Give dollars they would manage it in various positions then sell dollars to redeem at the end of the fund 
-
-it is possible in the future we will be able to ship burn to redeem multiple types of tokens 
-
-burn pro rata so one percent of the supply burns to redeem one percent of the sol 
-
-
-
-
-This is why increasing the AUM is of particular importance. 
+- Increasing the **Assets Under Management (AUM)** grows the value that can be redeemed.
+- Stronger AUM = more SOL (or other tokens) available at redemption.
