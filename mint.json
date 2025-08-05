@@ -55,18 +55,6 @@
             "docs/aum",
             "docs/using-wallet"
           ]
-        },
-        {
-          "group": "Founder DAOs",
-          "pages": [
-            "docs/founder-basics",
-            {
-              "group": "Advanced Topics",
-              "pages": [
-                "docs/tokenomics"
-              ]
-            }
-          ]
         }
       ]
     },
@@ -92,8 +80,6 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
+    "x": "https://x.com/daosdotfun"
   }
 }
