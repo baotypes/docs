@@ -48,7 +48,6 @@
           "pages": [
             "docs/intro",
             "docs/example-raise",
-            "docs/vesting",
             "docs/whitelisting",
             "docs/liquidity",
             "docs/expiry-redemption",
