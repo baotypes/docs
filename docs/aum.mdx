@@ -1,43 +1,49 @@
 ---
-title: 'AUM'
-description: 'Understanding Assets Under Management'
+title: "AUM"
+description: "Understanding Assets Under Management"
 ---
 
-# AUM Concept
+### AUM Concept
 
+- A core concept of [DAOs.FUN](http://DAOs.FUN) is **AUM** — Assets Under Management.
+- AUM is displayed on **your DAO’s homepage**.
+- Each DAO has a **designated Smart Wallet** where fund assets are stored.
+- On [DAOs.FUN](http://DAOs.FUN), all wallet assets are shown on your DAO page.
 
-So a core concept of Dows Fund is the AUM, the Assets Under Management. 
+### Net Asset Value (NAV)
 
-The AUM displays on your DAO home page. 
+- The **NAV (Net Asset Value)** is the **total sum of all assets under management**.
+- NAV is a key metric that users consider when **investing in DAOs**.
+- Wallet activities and holdings are **public and transparent** for anyone to inspect.
 
-Each DAO has a designated Smart Wallet Where are the funds assets are stored.
+### Transparency Best Practices
 
-On daos.fun we display all of the assets in a wallet on your DAO page. 
+- **Do not bridge assets off-chain** or withdraw to other Solana addresses.
+- While technically allowed, **withdrawing funds**:
+  - Requires intense communication and trust.
+  - Often **reduces trust and interest** from potential investors.
+  - Can cause people to **dismiss your DAO without further research** due to a lower visible AUM.
 
-The sum total of all of the assets under management is referred to as the NAV, or the net asset value. 
-The net asset value is one of the core things that DAOs Fund users pay attention to when investing in DAOs. 
-Your wallet, your wallet activities, and your holdings are public and available for everyone to inspect! 
+### Asset Display Order
 
-For this reason, we greatly discourage bridging off-chain, withdrawing funds to other Solana addresses, 
-There are limited examples where DAOs have done this and the market has received this well. 
-This creates a scenario where people totally trust the creator to return the funds before redemption. 
-It is possible to do this, to withdraw, and remain in good standing. But it is very difficult and requires an immense communication burden. 
-And it will limit your reach as a DAO manager because some people will see a lower AUM and not be interested just off of that. 
-They won't even research into your Dao or your management practice. 
+- SOL and Wrapped SOL balances are always shown **first**.
+- All other asset positions are **listed in descending order** by market value.
 
-We always list Sol and Wrapped Sol first and display your balances there. 
-Then we list your positions by market value. Descending. 
+### Illiquid or "Grayed-Out" Assets
 
-Grade-out assets are coins that do not have adequate liquidity. 
-We perform a simple price impact test to determine if there is enough liquidity in a coin for it to be considered a legitimate asset. 
-This was designed because assets with huge valuations in tiny liquidity pools were causing AUM bugs on our site. 
+- Assets with **insufficient liquidity** are grayed out.
+- A **simple price impact test** is performed to determine liquidity viability.
+- This system prevents **AUM bugs caused by tokens with inflated valuations** in low-liquidity pools.
 
+### Excluded Assets
 
-Currently, we do not display in the value of Daos Fun Liquidity Pools Raydiumliquidity pools or NFTs. 
+- The following are **not currently included** in AUM calculations:
+  - [DAOs.FUN](http://DAOs.FUN) liquidity pool tokens (e.g., Raydium LPs)
+  - NFTs
+  - Assets held in other wallets
+  - Assets on other chains
 
-Additionally, we do not currently offer support for indexing assets in other wallets or on other chains. 
+### Why AUM Matters
 
-DAO token holders often care about the AUM because it shows that there is a redemption value to the fund. 
-
-
-
+- DAO token holders care about AUM because it reflects **redemption value**.
+- A higher AUM = more perceived value and credibility for your DAO.
