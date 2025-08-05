@@ -44,7 +44,7 @@
       "group": "Documentation",
       "pages": [
         {
-          "group": "Investment DAOs",
+          "group": "daos.fun creator guide",
           "pages": [
             "docs/intro",
             "docs/example-raise",

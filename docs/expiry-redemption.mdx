@@ -3,51 +3,44 @@ title: "Expiry and Redemption"
 description: "Understanding the redemption process"
 ---
 
-### Understanding the Redemption Process
+## Expiration
 
-- The **redemption process** is what every DAO is ultimately building toward.
-- Governance will be introduced to **allow voting to extend the expiration date** of a DAO.
-  - Many DAOs may choose to extend the fund instead of redeeming if performance is strong.
+![Screenshot 2025-08-05 at 11.54.58 AM.png](/images/Screenshot2025-08-05at11.54.58AM.png)
 
-### DAO Token = Redemption Token
+- All DAOs have a set, on-chain expiration date which is displayed on their [daos.fun](http://daos.fun) page -- you can select the desired length of a DAO during DAO creation. 
+- Eventually, governance will be introduced to **allow voting to extend the expiration date** of a DAO.
+- When a DAO expires, **no more transactions** can be executed from the [daos.fun](http://daos.fun) treasury wallet. The DAO funds will be locked.
+- The **DAO token will continue to trade** freely on Meteora. 
+- **Set a calendar reminder** for this date to ensure your fund is ready before expiry.
 
-- DAO tokens are **redemption tokens** — they can be burned to redeem treasury assets.
-- A **timer** is attached to the Smart Wallet.
-  - This timer is based on the **duration selected \+ listing date** on the [DAOs.FUN](http://DAOs.FUN) site.
-  - Once the timer expires, **no more transactions** can be executed from the wallet.
-  - **Set a calendar reminder** for this date to ensure your fund is ready before expiry.
+## Closing the Fund Early
 
-### Closing the Fund
+- Currently, DAOs cannot be closed early. 
 
-- A fund can be **closed early at any time** by clicking **“Convert and Close.”**
-- To receive carry:
-  - You must **convert the fund** into **wrapped SOL (wSOL)**.
-  - You must **convert DAO tokens** into **wrapped SOL**.
+## DAO Token = Redemption Token
 
-### Post-Expiration Rules
+- DAO tokens are **redemption tokens** — when a DAO is expired, they can be burned to redeem treasury assets once a DAO expires.
+- All SPL tokens in the DAO can be redeemed prorata. 
+  - E.g. if you own 1% of the DAO tokens, you can redeem 1% of the SOL, WIF, POPCAT, etc in the DAO. 
+  - There is one exception -- the DAO's own DAO token cannot be redeemed. E.g. I cannot redeem \$GFC by burning \$GFC -- even if it is present in the DAO. 
+
+![Screenshot 2025-08-05 at 11.40.04 AM.png](/images/Screenshot2025-08-05at11.40.04AM.png)
+
+## Redemption Nuances
 
 - When the fund expires:
-  - A **snapshot** is taken of the wallet’s assets.
-  - **Only assets present at the time of the snapshot** are eligible for redemption.
+  - A **snapshot** is taken of the AUM's assets.
+  - **Only assets present in the AUM at the time of the snapshot** are eligible for redemption.
   - Tokens sent **after expiration** are not redeemable.
-- Even after expiration:
-  - The DAO token can **still be traded**.
-  - It behaves like a **normal SPL token** with special smart contract functionality.
 
-### Redemption Mechanics (Current State)
 
-- **Only SOL is redeemable** at this time.
-- All other tokens are currently **stuck in the wallet**.
 - Best practice is to **sell non-SOL tokens into SOL** before fund expiry.
-  - Similar to how a fund manager would liquidate assets before closing.
+  - Similar to how a fund manager would liquidate assets before closing. This ensures that a Creator will be able to receive their Carry %. 
 
-### Future Redemption Features (Planned)
+## Creator Carry % 
 
-- DAO may support **burn-to-redeem multiple token types** in the future.
-- Redemption may shift to a **pro-rata burn model**:
-  - Example: Burning 1% of the supply unlocks 1% of the SOL in the treasury.
+![Screenshot 2025-08-05 at 11.48.19 AM.png](/images/Screenshot2025-08-05at11.48.19AM.png)
 
-### Why AUM Matters
-
-- Increasing the **Assets Under Management (AUM)** grows the value that can be redeemed.
-- Stronger AUM = more SOL (or other tokens) available at redemption.
+- The carry is a percentage of DAO profits that the creator gets to keep. 
+- The creator gets the carry on the _profit_ that they generate in the DAO. 
+- E.g. If the DAO starts with 100 SOL, and ends with 150 SOL, the prift is 50 SOL. If the creator carry is 20%, then they get 10 SOL as the carry (20% of 50 SOL is 10 SOL). 
