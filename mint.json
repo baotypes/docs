@@ -48,8 +48,8 @@
           "pages": [
             "docs/intro",
             "docs/example-raise",
-            "docs/whitelisting",
             "docs/liquidity",
+            "docs/whitelisting",
             "docs/expiry-redemption",
             "docs/aum",
             "docs/using-wallet"
