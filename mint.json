@@ -51,8 +51,9 @@
             "docs/liquidity",
             "docs/whitelisting",
             "docs/aum",
-            "docs/expiry-redemption",
-            "docs/using-wallet"
+            "docs/using-wallet",
+            "docs/governance",
+            "docs/expiry-redemption"
           ]
         }
       ]
