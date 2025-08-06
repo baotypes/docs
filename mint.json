@@ -27,11 +27,11 @@
   },
   "tabs": [
     {
-      "name": "Documentation",
+      "name": "documentation",
       "url": "docs"
     },
     {
-      "name": "Creator Guide",
+      "name": "creator tips",
       "url": "creator"
     },
     {
@@ -41,7 +41,7 @@
   ],
   "navigation": [
     {
-      "group": "Documentation",
+      "group": "documentation",
       "pages": [
         {
           "group": "daos.fun creator guide",
@@ -58,7 +58,7 @@
       ]
     },
     {
-      "group": "Creator Guide",
+      "group": "creator guide",
       "pages": [
         "creator/overview",
         "creator/listing",
