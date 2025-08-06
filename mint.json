@@ -50,8 +50,8 @@
             "docs/example-raise",
             "docs/liquidity",
             "docs/whitelisting",
-            "docs/expiry-redemption",
             "docs/aum",
+            "docs/expiry-redemption",
             "docs/using-wallet"
           ]
         }
