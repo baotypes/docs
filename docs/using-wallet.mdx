@@ -1,54 +1,53 @@
 ---
-title: "Using the Wallet"
-description: "Hedgie Mode"
+title: "managing the aum"
 ---
 
-#### DAO Wallet Overview
+#### we no longer use the [daos.fun](http://daos.fun) wallet browser extension
 
-- The [**DAOs.FUN**](http://DAOs.FUN) Wallet is a **browser extension** that can be downloaded [here].
-- Best platforms for trading with the DAO Wallet:
-  - [**daos.fun**](http://daos.fun)
-  - [**jupe.ag**](http://jupe.ag)
-  - **Jupiter perps**
-  - **Raydium**
+- this browser extension is no longer supported. 
+- the [daos.fun](http://daos.fun) wallet browser extension is deprecated.
+- you can uninstall this browser extension from your browser. 
+- if you used to use this browser extension, you have to resetup your admin panel.
 
-#### Token Transfers & Limitations
+#### setting everything up to trade
 
-- **DAO Wallet does not allow easy token transfers**.
-  - If you need to send **SOL out of your DAO**, contact the [DAOs.FUN](http://DAOs.FUN) team.
-  - Currently, **only SOL** can be sent from the DAO Wallet.
+- go to your admin panel while you are logged in with your Creator wallet. 
+- in the Linked Wallets section, click "manually add delegate"
+- paste in your wallet address 
+- sign the transaction when prompted
+- great\! now you've linked your wallet.
 
-#### Wallet Architecture & Delegates
+![Screenshot 2025-08-06 at 9.47.32 AM.png](/images/Screenshot2025-08-06at9.47.32AM.png)
 
-- The DAO Wallet is a **fork of the Squads Protocol multisig wallet**.
-- Each fund can have up to **3 delegate signers**.
-  - Delegates are managed via the **admin panel**.
-  - [Click here] for a detailed guide on managing delegates.
-- The DAO wallet **signs on behalf of a separate fund address**.
-  - This design **prevents use of apps that require signature-based actions**, like:
-    - [**Pump.fun**](http://Pump.fun)
-    - **Kamino**
-    - **Drift**
-    - **Degen Coin Flip**
-    - [**DAOs.FUN**](http://DAOs.FUN)\*\* party rounds\*\* (allocations can't be reserved from DAO Wallet)
+![Screenshot 2025-08-06 at 9.47.45 AM.png](/images/Screenshot2025-08-06at9.47.45AM.png)
 
-#### Signing Limitations & Errors
+#### let's trade\!
 
-- Signing architecture can cause **"instruction too large"** errors.
-  - Signature logic adds instruction overhead, occasionally exceeding transaction size limits.
-- **No multisig thresholds** (e.g., 2-of-3):
-  - Each signature **executes the transaction** independently.
+![Screenshot 2025-08-06 at 9.50.24 AM.png](/images/Screenshot2025-08-06at9.50.24AM.png)
 
-#### Technical Details
+- click the "trade" button
+- swap SPL tokens in a familiar, jupiter-style interface
 
-- Each wallet:
-  - Has its own **address** (requires **some SOL** for gas).
-  - Is **not compatible with Ledger**.
-  - Is a **PDA (program-derived address)** — not a traditional public key wallet.
-- Wallet access is protected by a **browser password**.
-  - If lost, it can be **regenerated from the admin panel**.
+![Screenshot 2025-08-06 at 9.51.04 AM.png](/images/Screenshot2025-08-06at9.51.04AM.png)
 
-#### Automation & Trading
+additional
 
-- Wallet supports **automated transactions**.
-- Refer to the most **up-to-date transaction guide** [here].
+keep a small amount of gas in the linked wallet
+
+ensure right wallet is linked / connected
+
+ensure phantom
+
+ensure slippage
+
+sometimes fail -- try smaller transactions
+
+only spl -- no nft or perps or bridging
+
+all start with juipter verified can vote
+
+can't send out
+
+can have up to 3 signers -- full signer
+
+high frequency not recommended
