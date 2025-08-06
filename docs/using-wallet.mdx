@@ -4,16 +4,16 @@ title: "managing the aum"
 
 #### we no longer use the [daos.fun](http://daos.fun) wallet browser extension
 
-- this browser extension is no longer supported. 
+- this browser extension is no longer supported.
 - the [daos.fun](http://daos.fun) wallet browser extension is deprecated.
-- you can uninstall this browser extension from your browser. 
+- you can uninstall this browser extension from your browser.
 - if you used to use this browser extension, you have to resetup your admin panel.
 
 #### setting everything up to trade
 
-- go to your admin panel while you are logged in with your Creator wallet. 
+- go to your admin panel while you are logged in with your Creator wallet.
 - in the Linked Wallets section, click "manually add delegate"
-- paste in your wallet address 
+- paste in your wallet address
 - sign the transaction when prompted
 - great\! now you've linked your wallet.
 
@@ -30,24 +30,18 @@ title: "managing the aum"
 
 ![Screenshot 2025-08-06 at 9.51.04 AM.png](/images/Screenshot2025-08-06at9.51.04AM.png)
 
-additional
+## troubleshooting
 
-keep a small amount of gas in the linked wallet
+- does your signing wallet have gas? keep a small amount of gas in the linked wallet
+- do you have the correct wallet connected to daos.fun? 
+- are you using phantom? works the best
+- are you using a reasonable slippage?
+- have you tried splitting a larger transaction into multiple smaller transactions? removing decimal places or using smaller size can help.
 
-ensure right wallet is linked / connected
+## additional facts
 
-ensure phantom
-
-ensure slippage
-
-sometimes fail -- try smaller transactions
-
-only spl -- no nft or perps or bridging
-
-all start with juipter verified can vote
-
-can't send out
-
-can have up to 3 signers -- full signer
-
-high frequency not recommended
+- we only support trading spl tokens thru the jupiter API-- currently no nfts, perps, defi, or bridging is supported
+- all daos spawn only being able to trade jupiter-verified tokens -- you can make a proposal in governance to allow you to trade unverified jupiter SPL tokens. 
+- you can't withdraw tokens directly from the aum
+- you can have up to 3 signers linked to the day -- be aware that each wallet is a full signer and can execute transactions
+- the trading experience is good but is not optimized for high-frequency or time-sensitive trading patterns. we suggest avoiding these strategies. 
